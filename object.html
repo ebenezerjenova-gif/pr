@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Marks</title>
+</head>
+<body>
+  <h2>Student Data</h2>
+  <div id="output"></div>
+
+  <script>
+
+    let student = {
+      name: "John",
+      age: 20,
+      marks: {
+        math: 85,
+        english: 92,
+        science: 78
+      }
+    };
+
+    
+    let highestMarks;
+    let subject;
+
+    if (student.marks.math > student.marks.english && student.marks.math > student.marks.science) {
+      highestMarks = student.marks.math;
+      subject = "Math";
+    } else if (student.marks.english > student.marks.math && student.marks.english > student.marks.science) {
+      highestMarks = student.marks.english;
+      subject = "English";
+    } else {
+      highestMarks = student.marks.science;
+      subject = "Science";
+    }
+
+
+    document.getElementById("output").innerHTML =
+      "Name: " + student.name + "<br>" +
+      "Age: " + student.age + "<br>" +
+      "Highest Marks: " + highestMarks + " in " + subject;
+  </script>
+</body>
+</html>

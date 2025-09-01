@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Even Numbers</title>
+</head>
+<body>
+  <h2>Even Numbers from 1 to 10</h2>
+  <button onclick="printEven()">Show Even Numbers</button>
+  <p id="output"></p>
+
+  <script>
+    function printEven() {
+      let result = "";
+      for (let i = 1; i <= 10; i++) {
+        if (i % 2 === 0) {
+          result += i + " ";
+        }
+      }
+      document.getElementById("output").innerText = result;
+    }
+  </script>
+</body>
+</html>
