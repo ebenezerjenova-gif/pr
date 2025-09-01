@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Task 1</title>
+</head>
+<body>
+  <h2 id="heading">User Form</h2>
+  <form id="myForm">
+    <label for="name">Name (mandatory):</label>
+    <input type="text" id="name"><br><br>
+
+    <label for="email">Email (mandatory):</label>
+    <input type="email" id="email"><br><br>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age"><br><br>
+
+    <button type="button" onclick="styleForm()">Submit</button>
+  </form>
+
+  <script>
+    function styleForm() {
+      // Highlight mandatory fields
+      document.getElementById("name").style.backgroundColor = "lightyellow";
+      document.getElementById("email").style.backgroundColor = "lightyellow";
+
+      // Style heading
+      document.getElementById("heading").style.color = "blue";
+      document.getElementById("heading").style.textAlign = "center";
+
+      // Style form
+      document.getElementById("myForm").style.border = "2px solid green";
+      document.getElementById("myForm").style.padding = "10px";
+
+      // Make all labels bold
+      let labels = document.getElementsByTagName("label");
+      for (let i = 0; i < labels.length; i++) {
+        labels[i].style.fontWeight = "bold";
+      }
+    }
+  </script>
+</body>
+</html>
